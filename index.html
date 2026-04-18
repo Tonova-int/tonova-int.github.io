@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="贸易公司, 进出口服务, 全球贸易">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>福州通光贸易有限公司</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+/* ===== 方案一：深海蓝调 ===== */
+/* 基础响应式设置 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding-top: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 导航栏样式 */
+.navbar.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #214896 !important; /* 修改为指定颜色 #214896 */
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-height: 80px;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/* Logo文字样式 */
+.logo-text {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: default;
+}
+
+/* Logo文字中的公司名称部分 - 统一字体大小 */
+.company-name {
+    color: #ffffff; /* 改为白色 */
+    font-weight: 800;
+    font-size: 32px; /* 放大字体 */
+}
+
+.company-english {
+    color: #ffffff; /* 改为白色 */
+    font-weight: 600;
+    font-size: 26px; /* 放大字体 */
+    margin-left: 8px;
+}
+
+.company-trading {
+    color: #ffffff; /* 改为白色 */
+    font-weight: 600;
+    font-size: 24px; /* 放大字体 */
+    margin-left: 8px;
+}
+
+/* 桌面设备导航栏 */
+@media (min-width: 769px) {
+    .navbar-toggle {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block !important;
+    }
+    
+    .menu-wrapper {
+        float: right;
+        margin: 0;
+    }
+    
+    .menu-wrapper > li {
+        display: inline-block;
+        float: left;
+    }
+    
+    .menu-wrapper > li > a {
+        color: #ffffff !important; /* 改为白色 */
+        padding: 28px 15px;
+        transition: background-color 0.3s;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .menu-wrapper > li > a:hover,
+    .menu-wrapper > li.active > a {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #6a9feb !important; /* 悬停时变为黄色 */
+    }
+    
+    .products-dropdown .dropdown-menu {
+        min-width: 220px;
+        padding: 0;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .products-dropdown .dropdown-menu > li > a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+        color: #333;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+    }
+    
+    .products-dropdown .dropdown-menu > li > a:hover {
+        background-color: #6a9feb;
+        color: white;
+    }
+    
+    .products-dropdown .dropdown-menu > li:last-child > a {
+        border-bottom: none;
+    }
+    
+    .product-icon {
+        width: 24px;
+        margin-right: 10px;
+        text-align: center;
+    }
+}
+
+/* 移动设备导航栏 */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar.main-menu {
+        min-height: 60px;
+    }
+    
+    .navbar-brand {
+        padding: 0 15px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    
+    .logo-text {
+        font-size: 22px;
+    }
+    
+    .company-name {
+        color: #ffffff; /* 改为白色 */
+        font-size: 24px; /* 放大字体 */
+        margin-left: 5px;
+    }
+    
+    .company-english,
+    .company-trading {
+        color: #ffffff; /* 改为白色 */
+        font-size: 18px; /* 放大字体 */
+        margin-left: 5px;
+    }
+    
+    .navbar-toggle {
+        display: block;
+        margin-right: 0;
+        margin-top: 13px;
+        border: none;
+        background: transparent !important;
+    }
+    
+    .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    
+    .navbar-nav > li > a {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        color: #ffffff !important; /* 改为白色 */
+        font-weight: 600;
+    }
+    
+    .navbar-nav > li > a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #6a9feb !important; /* 悬停时变为黄色 */
+    }
+    
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        background-color: #214896; /* 修改为指定颜色 #214896 */
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .navbar-nav .dropdown-menu > li > a {
+        color: #ffffff !important;
+        padding: 12px 20px 12px 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-nav .dropdown-menu > li > a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #6a9feb !important;
+    }
+    
+    .product-icon {
+        width: 24px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+    .dropdown > a:after {
+        content: '\f107';
+        font-family: 'FontAwesome';
+        float: right;
+        margin-left: 10px;
+        color: #fff;
+    }
+    
+    .dropdown.open > a:after {
+        content: '\f106';
+        color: #fff;
+    }
+}
+
+/* About Section */
+.about-sec {
+    padding: 80px 0;
+    background: linear-gradient(rgba(248,249,250,0.85), rgba(248,249,250,0.85)),
+                url(images/background-about.jpg) center/cover;
+}
+
+.about-content {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+.about-highlight {
+    font-size: 2.0em;
+    line-height: 1.4;
+    color: #2c3e50;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+}
+
+.about-mission {
+    font-size: 1.4em !important;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* 服务区块样式 */
+.service-box {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(14, 188, 232, 0.15);
+}
+
+.service-box .icon i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #6a9feb;
+}
+
+/* 产品区块响应式样式 */
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(14, 188, 232, 0.15);
+}
+
+/* 为每个产品添加ID以便导航 */
+#daily-goods, #kitchen-supplies, #bathroom-supplies, 
+#outdoor-gear, #canned-food, #other-products,
+#daily-goods-mobile, #kitchen-supplies-mobile, #bathroom-supplies-mobile, 
+#outdoor-gear-mobile, #canned-food-mobile, #other-products-mobile {
+    scroll-margin-top: 100px;
+}
+
+/* 桌面端：图片在上，文字在下 */
+.portfolio-item-desktop {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item-desktop img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item-desktop .portfolio-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* 移动端：图片在左，文字在右 */
+.portfolio-item-mobile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.portfolio-item-mobile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.portfolio-item-mobile .portfolio-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item-desktop {
+        display: none;
+    }
+    
+    .portfolio-item-mobile {
+        display: flex;
+    }
+    
+    .portfolio-items {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+/* 服务区块样式 */
+.services-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(248,249,250,0.85), rgba(248,249,250,0.85)),
+                url(images/backround-ourservices.jpg) center/cover;
+}
+
+/* 服务特性样式 */
+.about-features {
+    margin-top: 10px;
+}
+
+.about-feature-item {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #6a9feb;
+}
+
+.about-feature-item strong {
+    font-size: 1.4em;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.about-feature-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 联系表单样式 */
+.contact-form {
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: #6a9feb;
+    border-color: #6a9feb;
+    padding: 12px 30px;
+}
+
+.btn-primary:hover {
+    background-color: #0ca5cc;
+    border-color: #0ca5cc;
+}
+
+/* Footer 样式 */
+.footer {
+    background-color: #214896; /* 修改为指定颜色 #214896 */
+    color: white;
+    padding: 50px 0 30px;
+}
+
+.footer-social-info {
+    margin: 20px 0;
+}
+
+.footer-social-info a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-social-info a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.contact-us {
+    margin: 20px 0;
+}
+
+.contact-us p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 页脚公司名称颜色调整 */
+.footer-logo div:first-child {
+    color: #ffffff; /* 改为白色 */
+    font-size: 32px; /* 放大字体 */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo div:last-child {
+    color: #ffffff; /* 改为白色 */
+    font-size: 26px; /* 放大字体 */
+    font-weight: 600;
+}
+
+/* 通用样式 */
+.section-header h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 3.0em;
+}
+
+.highlight-text {
+    color: #6a9feb;
+    font-size: 1.2em;
+}
+
+.bgSection {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+/* 联系我们页面样式 - 移除背景底色 */
+.contacts-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* 改为浅灰色背景 */
+    color: #333;
+}
+
+.contacts-section .section-header h2 {
+    color: #2c3e50;
+}
+
+.contacts-section .about-highlight {
+    color: #2c3e50;
+}
+
+/* 预加载器 */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #6a9feb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2.2em;
+    }
+    
+    .footer-social-info a {
+        margin: 0 5px;
+    }
+    
+    .footer-logo div:first-child {
+        font-size: 24px; /* 移动端相应放大 */
+    }
+    
+    .footer-logo div:last-child {
+        font-size: 18px; /* 移动端相应放大 */
+    }
+}
+</style>
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="status"></div>
+</div>
+
+<header>
+    <nav class="navbar main-menu navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- 删除链接，改为纯文本 -->
+                <div class="navbar-brand logo-text">
+                    <span class="company-name">福州通光贸易</span>
+                    <span class="company-english">FUZHOU TONOVA</span>
+                    <span class="company-trading">TRADING CO.,LTD.</span>
+                </div>
+            </div>
+
+            <div id="nav-menu" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav menu-wrapper">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            语言 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">English</a></li>
+                            <li><a href="index-ja.html">日本語</a></li>
+                            <li><a href="index-ru.html">Русский</a></li>
+                            <li><a href="index-cn.html">简体中文</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about" class="nav-link">关于我们</a></li>
+                    <li class="dropdown products-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            我们的产品 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#daily-goods" class="product-link nav-link" data-mobile-target="#daily-goods-mobile"><span class="product-icon"><i class="fa fa-shopping-basket"></i></span> 日用杂货</a></li>
+                            <li><a href="#kitchen-supplies" class="product-link nav-link" data-mobile-target="#kitchen-supplies-mobile"><span class="product-icon"><i class="fa fa-cutlery"></i></span> 厨房用品</a></li>
+                            <li><a href="#bathroom-supplies" class="product-link nav-link" data-mobile-target="#bathroom-supplies-mobile"><span class="product-icon"><i class="fa fa-bath"></i></span> 卫浴用品</a></li>
+                            <li><a href="#outdoor-gear" class="product-link nav-link" data-mobile-target="#outdoor-gear-mobile"><span class="product-icon"><i class="fa fa-tree"></i></span> 户外/生存用具</a></li>
+                            <li><a href="#canned-food" class="product-link nav-link" data-mobile-target="#canned-food-mobile"><span class="product-icon"><i class="fa fa-lemon-o"></i></span> 罐头类食品</a></li>
+                            <li><a href="#other-products" class="product-link nav-link" data-mobile-target="#other-products-mobile"><span class="product-icon"><i class="fa fa-cube"></i></span> 其他产品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services" class="nav-link">我们的服务</a></li>
+                    <li><a href="#contact" class="nav-link">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="main-content">
+
+<section id="about" class="about-sec section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header text-center">
+                <h2><span class="highlight-text">关于我们</span></h2>
+                <div class="about-highlight">
+                    福州通光贸易有限公司是一家位于福州的贸易公司，致力于提供中国国内外各类产品进出口服务，以及创新的商业解决方案。
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="about-content">
+                    <div class="about-mission">
+                        让您的货物能够顺利在全世界买卖，是我们的首要任务。
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-box">
+                                <div class="icon">
+                                    <i class="fa fa-plane"></i>
+                                </div>
+                                <h3>中国国内货物出口</h3>
+                                <p>协助中国优质产品出口至全球市场，提供从采购、质检到物流配送的一站式出口解决方案。</p>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-box">
+                                <div class="icon">
+                                    <i class="fa fa-ship"></i>
+                                </div>
+                                <h3>国外产品进口中国</h3>
+                                <p>引进国外优质产品进入中国市场，处理报关、检验检疫等进口手续，确保产品顺利进入中国国内市场。</p>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-box">
+                                <div class="icon">
+                                    <i class="fa fa-cogs"></i>
+                                </div>
+                                <h3>其他各项贸易方案</h3>
+                                <p>根据您的具体需求，提供定制化的贸易解决方案。欢迎与我们洽谈合作细节。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-main-text" style="margin-top: 40px;">
+                        <div class="about-mission">我們秉承"誠信經營、客戶至上"的理念，通過專業的貿易服務和創新的商業模式，幫助客戶在全球市場中把握商機，實現業務增長。</div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section> 
+
+<section id="portfolio" class="bgSection portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header text-center">
+                <h2><span class="highlight-text">我们的产品</span></h2>
+                <div class="about-highlight" style="margin-bottom: 30px;">我們提供各類優質產品，從日用雜貨到戶外用具，滿足您多樣化的需求。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-works">
+        <div class="portfolio-items">
+            <!-- 日用杂货 - 桌面版 -->
+            <div id="daily-goods" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_creative products.jpg" alt="日用杂货">
+                <div class="portfolio-content">
+                    <h4>日用杂货/创意小商品</h4>
+                    <p>提供各类高品质的日常生活用品，包括清洁用品、收纳用品、家居装饰等；以及有趣的创意商品，让您的生活更加丰富舒适。</p>
+                </div>
+            </div>
+            <!-- 日用杂货 - 移动版 -->
+            <div id="daily-goods-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_creative products.jpg" alt="日用杂货">
+                <div class="portfolio-content">
+                    <h4>日用杂货/创意小商品</h4>
+                    <p>提供各类高品质的日常生活用品/有趣的创意商品。</p>
+                </div>
+            </div>
+
+            <!-- 厨房用品 - 桌面版 -->
+            <div id="kitchen-supplies" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_kitchen.jpg" alt="厨房用品">
+                <div class="portfolio-content">
+                    <h4>厨房用品</h4>
+                    <p>精选各类厨房用具，包括锅具、烹饪工具等，提升您的烹饪体验，让每一餐都充满乐趣。</p>
+                </div>
+            </div>
+            <!-- 厨房用品 - 移动版 -->
+            <div id="kitchen-supplies-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_kitchen.jpg" alt="厨房用品">
+                <div class="portfolio-content">
+                    <h4>厨房用品</h4>
+                    <p>精选各类厨房用具，提升烹饪体验。</p>
+                </div>
+            </div>
+
+            <!-- 卫浴用品 - 桌面版 -->
+            <div id="bathroom-supplies" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_bath.jpg" alt="卫浴用品">
+                <div class="portfolio-content">
+                    <h4>卫浴用品</h4>
+                    <p>提供高品质的卫浴产品，为您打造舒适洁净的卫浴空间。</p>
+                </div>
+            </div>
+            <!-- 卫浴用品 - 移动版 -->
+            <div id="bathroom-supplies-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_bath.jpg" alt="卫浴用品">
+                <div class="portfolio-content">
+                    <h4>卫浴用品</h4>
+                    <p>高品质卫浴产品，舒适洁净体验。</p>
+                </div>
+            </div>
+
+            <!-- 户外/生存用具 - 桌面版 -->
+            <div id="outdoor-gear" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_campsurvive.jpg" alt="户外/生存用具">
+                <div class="portfolio-content">
+                    <h4>户外/生存用具</h4>
+                    <p>提供专业的户外和生存装备，包括炊具、求生工具等，让您尽情享受大自然的乐趣。</p>
+                </div>
+            </div>
+            <!-- 户外/生存用具 - 移动版 -->
+            <div id="outdoor-gear-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_campsurvive.jpg" alt="户外/生存用具">
+                <div class="portfolio-content">
+                    <h4>户外/生存用具</h4>
+                    <p>专业户外装备，探索自然乐趣。</p>
+                </div>
+            </div>
+
+            <!-- 罐头类食品 - 桌面版 -->
+            <div id="canned-food" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_canfoods.jpg" alt="罐头类食品">
+                <div class="portfolio-content">
+                    <h4>罐头类食品</h4>
+                    <p>精选各类优质罐头食品，保质期长，便于储存和携带。</p>
+                </div>
+            </div>
+            <!-- 罐头类食品 - 移动版 -->
+            <div id="canned-food-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_canfoods.jpg" alt="罐头类食品">
+                <div class="portfolio-content">
+                    <h4>罐头类食品</h4>
+                    <p>优质罐头食品，便于储存携带。</p>
+                </div>
+            </div>
+
+            <!-- 其他 - 桌面版 -->
+            <div id="other-products" class="item portfolio-item portfolio-item-desktop">
+                <img src="images/img-portfolio/portfolio_others.jpg" alt="其他产品">
+                <div class="portfolio-content">
+                    <h4>其他产品</h4>
+                    <p>我们还提供各类其他优质产品，满足您多样化的需求。</p>
+                </div>
+            </div>
+            <!-- 其他 - 移动版 -->
+            <div id="other-products-mobile" class="item portfolio-item portfolio-item-mobile">
+                <img src="images/img-portfolio/portfolio_others.jpg" alt="其他产品">
+                <div class="portfolio-content">
+                    <h4>其他产品</h4>
+                    <p>多样优质产品，满足各种需求。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services-section section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header text-center">
+                <h2><span class="highlight-text">我们的服务</span></h2>
+                <div class="about-highlight" style="margin-bottom: 3px;">我們提供全方位的貿易服務，連接中國與全球市場，為您的業務發展提供專業支持。</div>
+            </div>
+        </div>
+
+        <div class="about-features" style="margin-top: 10px;">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="about-feature-item">
+                        <strong>全球贸易网络</strong>
+                        <p>建立完善的国际供应链体系，连接全球市场与本地资源，为客户提供全方位的贸易支持。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="about-feature-item">
+                        <strong>专业团队服务</strong>
+                        <p>拥有经验丰富的贸易专家团队，熟悉国际贸易规则，确保每一笔交易都能顺利完成。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="about-feature-item">
+                        <strong>质量控制体系</strong>
+                        <p>严格的质量管理流程，从供应商筛选到最终交付，确保产品质量符合国际标准。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="about-feature-item">
+                        <strong>定制化解决方案</strong>
+                        <p>根据客户需求量身定制贸易方案，提供灵活多样的合作模式，满足不同业务需求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contacts-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header text-center">
+                <h2><span class="highlight-text">联系我们</span></h2>
+                <div class="about-highlight" style="margin-bottom: 30px;">有任何問題或合作機會，歡迎隨時與我們聯繫。我們的專業團隊將竭誠為您服務。</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="contact-form">
+                    <form method="post" action="#" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="主题" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" id="message" name="message" placeholder="您的留言" required></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">发送消息</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-content text-center">
+                    <div class="footer-logo">
+                        <div style="font-size: 32px; font-weight: bold; margin-bottom: 10px;">
+                            福州通光贸易有限公司
+                        </div>
+                        <div style="font-size: 26px; font-weight: 600;">
+                            FUZHOU TONOVA TRADING CO.,LTD.
+                        </div>
+                    </div>
+
+                    <div class="footer-social-info">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+
+                    <div class="contact-us">
+                        <p><i class="fa fa-envelope"></i> info@tonova-trading.com</p>
+                        <p><i class="fa fa-map-marker"></i> 中国福建省福州市</p>
+                    </div>
+
+                    <p class="copyright">© 2023 福州通光贸易有限公司 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    // 预加载器
+    $(window).on('load', function() {
+        $('.preloader').fadeOut('slow');
+    });
+
+    // 导航链接点击事件 - 统一处理
+    $('.nav-link').on('click', function(e) {
+        e.preventDefault();
+        
+        // 移动端点击后折叠菜单
+        if($(window).width() <= 768) {
+            $('.navbar-collapse').collapse('hide');
+        }
+        
+        var target = $(this).attr('href');
+        
+        if ($(target).length) {
+            // 滚动到目标位置，确保标题可见
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 80
+            }, 600);
+        }
+    });
+
+    // 产品链接点击事件
+    $('.product-link').on('click', function(e) {
+        e.preventDefault();
+        
+        if($(window).width() > 768) {
+            $('.products-dropdown').removeClass('open');
+        } else {
+            $('.navbar-collapse').collapse('hide');
+        }
+        
+        var target;
+        if($(window).width() <= 768) {
+            target = $(this).data('mobile-target');
+        } else {
+            target = $(this).attr('href');
+        }
+        
+        if ($(target).length) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 80
+            }, 600);
+        }
+    });
+
+    // 语言下拉菜单点击事件
+    $('.dropdown-menu a').not('.nav-link').on('click', function(e) {
+        if($(window).width() > 768) {
+            $(this).closest('.dropdown').removeClass('open');
+        } else {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    // 表单提交处理
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        alert('感谢您的留言！我们会尽快与您联系。');
+        this.reset();
+    });
+
+    // 导航栏滚动效果
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+});
+</script>
+</body>
+</html>
