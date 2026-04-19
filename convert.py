@@ -2,10 +2,10 @@ import pandas as pd
 import datetime
 
 # 讀取 CSV
-df = pd.read_csv("products.csv")
+df = pd.read_csv("data/products.csv")
 
 # 生成 YML 檔案
-with open("products.yml", "w", encoding="utf-8") as f:
+with open("data/products.yml", "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
     f.write('<!DOCTYPE yml_catalog SYSTEM "shops.dtd">\n')
     f.write(f'<yml_catalog date="{datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}">\n')

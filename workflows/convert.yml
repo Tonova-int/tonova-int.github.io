@@ -3,7 +3,7 @@ name: Convert CSV to YML
 on:
   push:
     paths:
-      - "products.csv"   # 當 products.csv 更新時觸發
+      - "data/products.csv"   # 當 products.csv 更新時觸發
 
 jobs:
   build:
