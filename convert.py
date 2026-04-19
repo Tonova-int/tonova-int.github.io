@@ -1,11 +1,11 @@
 import pandas as pd
 import datetime
 
-# ×xÈ¡ CSV
+# è®€å– CSV
 df = pd.read_csv("data/products.csv")
 
-# Éú³É YML ™n°¸
-with open("data/products.yml", "w", encoding="utf-8") as f:
+# ç”Ÿæˆ YML æª”æ¡ˆ
+with open("products.yml", "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
     f.write('<!DOCTYPE yml_catalog SYSTEM "shops.dtd">\n')
     f.write(f'<yml_catalog date="{datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}">\n')
@@ -23,7 +23,7 @@ with open("data/products.yml", "w", encoding="utf-8") as f:
 
     for i, row in df.iterrows():
         f.write(f'      <offer id="{i+1}" available="true">\n')
-        # ×Ô„Ó‚Éœy™ÚÎ»
+        # è‡ªå‹•åµæ¸¬æ¬„ä½
         if "name" in df.columns:
             f.write(f'        <name>{row["name"]}</name>\n')
         if "price" in df.columns:
