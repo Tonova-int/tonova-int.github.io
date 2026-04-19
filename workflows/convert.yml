@@ -3,7 +3,7 @@ name: Convert CSV to YML
 on:
   push:
     paths:
-      - "data/products.csv"   # ®” products.csv ¸üÐÂ•rÓ|°l
+      - "data/products.csv"   
 
 jobs:
   build:
